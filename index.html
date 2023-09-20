@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Car Finance</title>
+  </head>
+  <body>
+    <section class="main_page">
+      <header class="header">
+        <div class="logo">
+          <img src="public/images/logo.svg" alt="LOGO" class="logo_img" />
+          <div class="logo_title">
+            <img src="public/images/C1.svg" alt="C" />
+            <img src="public/images/a.svg" alt="a" />
+            <img src="public/images/r.svg" alt="r" />
+            <img src="public/images/F.svg" alt="F" />
+            <img src="public/images/i.svg" alt="i" />
+            <img src="public/images/n.svg" alt="n" />
+            <img src="public/images/a.svg" alt="a" />
+            <img src="public/images/n.svg" alt="n" />
+            <img src="public/images/C.svg" alt="c" />
+            <img src="public/images/e.svg" alt="e" />
+            <img src="public/images/2.svg" alt="e" />
+            <img src="public/images/4.svg" alt="e" />
+            <img src="public/images/7.svg" alt="e" />
+          </div>
+        </div>
+        <div class="secure">
+          <img src="public/images/secure.svg" alt="secure" class="img_secure" />
+          <p class="secure_title">Secure</p>
+        </div>
+      </header>
+      <div class="bar" id="swup">
+        <div class="full_bar"></div>
+        <div class="procent_bar"></div>
+      </div>
+      <img
+        src="public/images/exelent.png"
+        alt="Exelent ******"
+        class="exelent_img"
+      />
+      <div class="container">
+        <main id="swup_1" class="transition-fade">
+          <h1 class="title">Do you have a full UK driving licence?</h1>
+          <div class="buttons">
+            <a href="" class="yes_btn"> Yes </a>
+            <a href="" class="no_btn"> No </a>
+          </div>
+          <button class="previous">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_2" class="transition-fade">
+          <h1 class="title">Which best describe you?</h1>
+          <div class="buttons1">
+            <a href="" class="describe_btn" id="married">Married</a>
+            <a href="" class="describe_btn" id="single">Single</a>
+            <a href="" class="describe_btn" id="cohabiting">Cohabiting</a>
+            <a href="" class="describe_btn" id="divorced">Divorced</a>
+            <a href="" class="describe_btn" id="separated">Separated</a>
+            <a href="" class="describe_btn" id="widiwed">Widowed</a>
+            <a href="" class="describe_btn" id="civil">Civil partnership</a>
+          </div>
+          <button class="previous">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_3" class="transition-fade">
+          <form>
+            <label for="day" class="date_title">Date of birth</label>
+            <div class="inputs">
+              <input
+                type="text"
+                id="day"
+                name="day"
+                class="dob-input"
+                maxlength="2"
+                placeholder="DD"
+                oninput="nextInput(1)"
+                onfocus="activateInputs()"
+                onblur="deactivateInputs();"
+              />
+              <p class="item">/</p>
+              <input
+                type="text"
+                id="month"
+                name="month"
+                class="dob-input"
+                maxlength="2"
+                placeholder="MM"
+                oninput="nextInput(2)"
+                onfocus="activateInputs()"
+                onblur="deactivateInputs();"
+              />
+              <p class="item">/</p>
+              <input
+                type="text"
+                id="year"
+                name="year"
+                class="dob-input"
+                placeholder="YYYY"
+                maxlength="4"
+                onfocus="activateInputs()"
+                onblur="deactivateInputs();"
+              />
+            </div>
+            <p id="error" class="error_data"></p>
+            <a href="" id="submit" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_4" class="transition-fade">
+          <h1 class="title">What is your employment status?</h1>
+          <div class="buttons2">
+            <a href="" class="describe_btn_1">Full-time</a>
+            <a href="" class="describe_btn_1">Self-employed</a>
+            <a href="" class="describe_btn_1">Part-time</a>
+            <a href="" class="describe_btn_1">Disability</a>
+            <a href="" class="describe_btn_1">Disability</a>
+            <a href="" class="describe_btn_1">Disability</a>
+            <a href="" class="describe_btn_1 span2">Other</a>
+          </div>
+          <button class="previous">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_5" class="transition-fade">
+          <h1 class="title">Which best describe you?</h1>
+          <form>
+            <div class="inputs_job">
+              <label for="day" class="job_title">Your job title</label>
+              <input
+                type="text"
+                id="job-title"
+                name="job"
+                class="job_input"
+                placeholder="Your job title"
+                onfocus="activateInputs1()"
+                onblur="deactivateInputs1();"
+              />
+              <p id="error_please_1" class="error"></p>
+            </div>
+            <div class="inputs_job">
+              <label for="day" class="company_title"
+                >Which company do you work for?</label
+              >
+              <input
+                type="text"
+                id="company-title"
+                name="job"
+                class="job_input"
+                placeholder="Which company do you work for?"
+                onfocus="activateInputs2()"
+                onblur="deactivateInputs2();"
+              />
+              <p id="error_please_2" class="error"></p>
+            </div>
+            <div class="inputs_job">
+              <label for="day" class="workplace_title"
+                >Where is your workplace based?</label
+              >
+              <input
+                type="text"
+                id="workplace-title"
+                name="job"
+                class="job_input"
+                placeholder="Where is your workplace based?"
+                onfocus="activateInputs3()"
+                onblur="deactivateInputs3();"
+              />
+              <p id="error_please_3" class="error"></p>
+            </div>
+            <a href="" id="submit_1" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_6" class="transition-fade">
+          <h1 class="title">How long have you worked at ?</h1>
+          <form>
+            <div class="inputs_y_m">
+              <div class="input_y">
+                <label for="year" class="year_count_title">Year</label>
+                <input
+                  type="text"
+                  id="year_c"
+                  name="year"
+                  class="year_input"
+                  placeholder="Year"
+                  onfocus="activateInputs4()"
+                  onblur="deactivateInputs4();"
+                />
+              </div>
+              <div class="input_m">
+                <label for="month" class="month_count_title">Month</label>
+                <input
+                  type="text"
+                  id="month_c"
+                  name="month"
+                  class="year_input"
+                  placeholder="Month"
+                  onfocus="activateInputs5()"
+                  onblur="deactivateInputs5();"
+                />
+              </div>
+              <p id="error_y_m" class="error_c_y_m"></p>
+            </div>
+            <a href="" id="submit_y_m" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_7" class="transition-fade">
+          <h1 class="title_wrap">Roughly, how much do you earn each month?</h1>
+          <form>
+            <div class="inputs_earn">
+              <div class="input_euro">
+                <label for="year" class="earn_title">£</label>
+                <input
+                  type="text"
+                  id="earn_input"
+                  name="euro"
+                  class="earn_input"
+                  placeholder=""
+                  onfocus="activateInputs6()"
+                  onblur="deactivateInputs6();"
+                />
+              </div>
+              <p id="error_earn" class="error_c_y_m"></p>
+            </div>
+            <a href="" id="submit_error" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_8" class="transition-fade">
+          <h1 class="title">Next, where do you live?</h1>
+          <p class="just">Just start typing your address...</p>
+          <form>
+            <input
+              type="text"
+              id="adress_input"
+              name="adress"
+              class="adress_input"
+              placeholder="Eg 'CRO3AG' or 'Factory Lane'
+              "
+            />
+            <div class="stolbik">
+              <ul class="adresses">
+                <li class="address_item">
+                  AB10 1FG 1 Littlejohn Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1JX 1/R, 32 Schoolhill, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1JX 1/L, 32 Schoolhill, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1a Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1b Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1c Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1d Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1e Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1f Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1g Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1h Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NH 1j Lindsay Street, Aberdeen
+                </li>
+                <li class="address_item">AB10 1NL 1 Diamond Place, Aberdeen</li>
+                <li class="address_item">
+                  AB10 1NL 1B Diamond Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1NL 1A Diamond Place, Aberdeen
+                </li>
+                <li class="address_item">AB10 1PF 1 Mackie Place, Aberdeen</li>
+                <li class="address_item">
+                  AB10 1QD 1/L, 53 Skene Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1QD 1R, 53 Skene Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1QN 1/R, 171 Skene Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1QN 1/L, 171 Skene Street, Aberdeen
+                </li>
+                <li class="address_item">AB10 1QZ 1 Ruby Place, Aberdeen</li>
+                <li class="address_item">
+                  AB10 1RD 1a Golden Square, Aberdeen
+                </li>
+                <li class="address_item">AB10 1RQ Minister Lane, Aberdeen</li>
+                <li class="address_item">
+                  AB10 1FG 33 Littlejohn Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1JS 33 Belmont Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1SB Nawaabs Tandoori, 33 Summer Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1ST 33 Thistle Court, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1TB 33 Gilcomstoun Land, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1TJ Utopia Body Arts, 33 Huntly Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1UG 33 Picardy Court, Rose Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1UJ 33 Margaret Street, Aberdeen
+                </li>
+                <li class="address_item">AB10 1UN 33 Carden Place, Aberdeen</li>
+                <li class="address_item">
+                  AB10 1UU 33 Victoria Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1XY 33 Albert Terrace, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1YL F G Burnett Ltd, 33 Albyn Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 1YL Central Investment Services (Scotland) Ltd, 33 Albyn
+                  Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6AG 33 Bloomfield Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat A, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat B, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat C, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat D, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat E, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  Flat F, 33 Bloomfield Road, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6AL 33 Balmoral Road, Aberdeen
+                </li>
+                <li class="address_item">AB10 6AP 33 Gairn Road, Aberdeen</li>
+                <li class="address_item">
+                  AB10 6AY 33 Gairn Terrace, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6BE 33 Gairn Crescent, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6BS 33 Holburn Street, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6DH Flat B, Nellfield Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6DH Flat C, Nellfield Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6DH Flat D, Nellfield Place, Aberdeen
+                </li>
+                <li class="address_item">
+                  AB10 6DH Flat E, Nellfield Place, Aberdeen
+                </li>
+              </ul>
+            </div>
+            <a href="" id="submit_addres" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_9" class="transition-fade">
+          <h1 class="title">Ok, which best describes you?</h1>
+          <form>
+            <div class="buttons_2">
+              <a href="" class="button_item"> Private tenant </a>
+              <a href="" class="button_item"> Home owner </a>
+              <a href="" class="button_item"> Council tenant </a>
+              <a href="" class="button_item"> Living with parents </a>
+            </div>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_10" class="transition-fade">
+          <h1 class="title_wrap">
+            How long have you worked at AB10 6AL 33 Balmoral Road, Aberdeen?
+          </h1>
+          <p class="ask">Lenders ask for 3 years' address history.</p>
+          <form>
+            <div class="inputs_y_m">
+              <div class="input_y">
+                <label for="year" class="year_count_title_2">Year</label>
+                <input
+                  type="text"
+                  id="year_c_2"
+                  name="year"
+                  class="year_input"
+                  placeholder="Year"
+                  onfocus="activateInputs4_2()"
+                  onblur="deactivateInputs4_2();"
+                />
+              </div>
+              <div class="input_m">
+                <label for="month" class="month_count_title_2">Month</label>
+                <input
+                  type="text"
+                  id="month_c_2"
+                  name="month"
+                  class="year_input"
+                  placeholder="Month"
+                  onfocus="activateInputs5_2()"
+                  onblur="deactivateInputs5_2();"
+                />
+              </div>
+              <p id="error_y_m_2" class="error_c_y_m"></p>
+            </div>
+            <p class="great">Great, that's the last address we need.</p>
+            <a href="" id="submit_y_m_2" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_11" class="transition-fade">
+          <h1 class="title_wrap">Roughly how much would you like to borrow?</h1>
+          <form>
+            <div class="inputs_earn">
+              <div class="input_euro">
+                <label for="year" class="earn_title_2">£</label>
+                <input
+                  type="text"
+                  id="earn_input_2"
+                  name="euro"
+                  class="earn_input"
+                  placeholder=""
+                  onfocus="activateInputs6_2()"
+                  onblur="deactivateInputs6_2();"
+                />
+              </div>
+              <p class="change">You can change this later on.</p>
+              <p id="error_earn_2" class="error_c_y_m"></p>
+            </div>
+            <a href="" id="submit_error_2" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+        </main>
+        <main id="swup_12" class="transition-fade">
+          <h1 class="title">Almost done, let us know who you are?</h1>
+          <p class="t_title">Your title</p>
+          <div class="buttons_title">
+            <button class="btn_title_item">Mr</button>
+            <button href="" class="btn_title_item">Mrs</button>
+            <button href="" class="btn_title_item">Miss</button>
+            <button href="" class="btn_title_item">Ms</button>
+          </div>
+          <form>
+            <div class="inputs_n_f">
+              <div class="input_n">
+                <label for="name" class="name_title">First name</label>
+                <input
+                  type="text"
+                  id="name_input"
+                  name="name"
+                  class="name_input"
+                  placeholder="First name"
+                  onfocus="activateInputs7()"
+                  onblur="deactivateInputs7()"
+                />
+                <p id="error_n" class="error_n"></p>
+              </div>
+
+              <div class="input_f">
+                <label for="family name" class="family_name_title">Month</label>
+                <input
+                  type="text"
+                  id="family_input"
+                  name="family name"
+                  class="family_input"
+                  placeholder="Last name"
+                  onfocus="activateInputs8()"
+                  onblur="deactivateInputs8();"
+                />
+                <p id="error_f" class="error_f"></p>
+              </div>
+            </div>
+            <a href="" id="submit_n_f" class="submit_input">Continue →</a>
+          </form>
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+          <div class="subtitle">
+            <p class="sub_item">
+              The personal information we have collected from you will be shared
+              with fraud prevention agencies who will use it to prevent fraud
+              and money laundering and to verify your identity. If fraud is
+              detected, you could be refused finance. Further details of how
+              your information will be used by us and these fraud prevention
+              agencies, and your data protection rights, can be found under our
+              <span class="active_color">privacy-policy.</span>
+            </p>
+          </div>
+        </main>
+        <main id="swup_13" class="transition-fade">
+          <h1 class="title">And finally, where should we send your quote?</h1>
+          <form>
+            <div class="inputs_e_p">
+              <div class="input_e">
+                <label for="email" class="email_title">Email</label>
+                <input
+                  type="email"
+                  id="email_input"
+                  name="email"
+                  class="email_input"
+                  placeholder="Email"
+                  onfocus="activateInputs9()"
+                  onblur="deactivateInputs9()"
+                />
+                <p id="error_e" class="error_e"></p>
+              </div>
+
+              <div class="input_p">
+                <label for="phone" class="phone_title">Phone</label>
+                <input
+                  type="tel"
+                  id="phone_input"
+                  name="phone"
+                  class="phone_input"
+                  placeholder="Phone"
+                  onfocus="activateInputs10()"
+                  onblur="deactivateInputs10();"
+                />
+                <p id="error_p" class="error_p"></p>
+              </div>
+              <h3 class="term">Terms and conditions</h3>
+
+              <div class="radio">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="termsCheckbox" />
+                  <span class="checkmark"></span>
+                  I have read and agree to
+                  <span class="acitve_color underline"
+                    >CarFinance 247 Limited's terms & conditions</span
+                  >
+                </label>
+                <p id="errorTerms" class="errorTerms"></p>
+              </div>
+            </div>
+            <a href="" id="submit_e_p" class="submit_input">Continue →</a>
+          </form>
+
+          <button class="previous" id="previous_submit">
+            <div class="previous_title">
+              <img src="public/images/before.svg" alt="back" class="back" />
+              <h2 class="btn_title">Previous</h2>
+            </div>
+            <p class="btn_title_sub">You won't lose your information</p>
+          </button>
+          <div class="subtitle">
+            <p class="sub_item">
+              The personal information we have collected from you will be shared
+              with fraud prevention agencies who will use it to prevent fraud
+              and money laundering and to verify your identity. If fraud is
+              detected, you could be refused finance. Further details of how
+              your information will be used by us and these fraud prevention
+              agencies, and your data protection rights, can be found under our
+              <span class="active_color">privacy-policy.</span>
+            </p>
+          </div>
+        </main>
+      </div>
+    </section>
+    <script src="JavaScript.js"></script>
+  </body>
+</html>
